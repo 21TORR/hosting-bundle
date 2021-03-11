@@ -1,0 +1,50 @@
+{
+	"name": "21torr/hosting",
+	"type": "symfony-bundle",
+	"description": "Base bundle for hosting any Symfony-based application.",
+	"homepage": "https://github.com/21TORR/hosting-bundle",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "21TORR",
+			"homepage": "https://www.21torr.com/"
+		}
+	],
+	"require": {
+		"php": "^7.4 || ^8.0",
+		"21torr/bundle-helpers": "^2.1",
+		"symfony/config": "^5.2",
+		"symfony/dependency-injection": "^5.2"
+	},
+	"require-dev": {
+		"bamarni/composer-bin-plugin": "^1.4",
+		"roave/security-advisories": "dev-master",
+		"symfony/phpunit-bridge": "^5.2"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-next": "1.x-dev"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Torr\\Hosting\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Torr\\Hosting\\": "tests/"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"@composer bin all install --ansi"
+		],
+		"post-update-cmd": [
+			"@composer bin all update --ansi"
+		]
+	}
+}
