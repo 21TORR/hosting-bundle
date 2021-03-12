@@ -25,7 +25,29 @@ final class HostingTier
 		return [
 			self::TIER_DEVELOPMENT,
 			self::TIER_STAGING,
-			self::TIER_PRODUCTION
+			self::TIER_PRODUCTION,
 		];
+	}
+
+	/**
+	 */
+	public function isDevelopment () : bool
+	{
+		return self::TIER_DEVELOPMENT === $this->currentTier;
+	}
+
+	/**
+	 */
+	public function isStaging () : bool
+	{
+		return self::TIER_STAGING === $this->currentTier;
+	}
+
+
+	/**
+	 */
+	public function isProduction () : bool
+	{
+		return self::TIER_PRODUCTION === $this->currentTier;
 	}
 }
