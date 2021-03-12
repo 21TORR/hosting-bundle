@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+
+    Torr\Hosting\:
+        resource: ../src/*
+        exclude: ../src/{Exception,AssetsBundle.php}
+
+    Torr\Hosting\Tier\HostingTier:
+        $currentTier: !abstract defined via configuration

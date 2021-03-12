@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Torr\Hosting\Tier;
 
+use Torr\Hosting\Exception\InvalidCurrentHostingTierException;
+
 final class HostingTier
 {
 	private const TIER_DEVELOPMENT = "development";
@@ -14,6 +16,15 @@ final class HostingTier
 	 */
 	public function __construct (string $currentTier)
 	{
+		if (!\in_array($currentTier, self::getAllowedTiers(), true))
+		{
+			throw new InvalidCurrentHostingTierException(\sprintf(
+				"Invalid hosting tier: '%s'. Only allowed values are: %s",
+				$currentTier,
+				\implode(", ", self::getAllowedTiers())
+			));
+		}
+
 		$this->currentTier = $currentTier;
 	}
 

@@ -23,7 +23,7 @@ final class HostingBundle extends Bundle
 			static function (array $config, ContainerBuilder $container) : void
 			{
 				$container->getDefinition(HostingTier::class)
-					->setArgument('$tier', $config["hosting_tier"]);
+					->setArgument('$currentTier', $config["tier"]);
 			}
 		);
 	}
