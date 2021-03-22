@@ -1,3 +1,10 @@
+1.1.1
+=====
+
+*   (bug) Fix copy & paste error in CLI output.
+*   (improvement) Improve output.
+
+
 1.1.0
 =====
 

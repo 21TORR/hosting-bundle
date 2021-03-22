@@ -30,9 +30,13 @@ final class PostBuildTasksCommand extends Command
 	protected function execute(InputInterface $input, OutputInterface $output) : int
 	{
 		$io = new SymfonyStyle($input, $output);
-		$io->title("Run Post Deployment Tasks");
+		$io->title("Run Post Build Tasks");
 
 		$this->runners->runPostBuild($io);
+
+		$io->newLine();
+		$io->success("Run all post build tasks.");
+
 		return 0;
 	}
 }

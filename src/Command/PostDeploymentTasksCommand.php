@@ -33,6 +33,10 @@ final class PostDeploymentTasksCommand extends Command
 		$io->title("Run Post Deployment Tasks");
 
 		$this->runners->runPostDeployment($io);
+
+		$io->newLine();
+		$io->success("Run all post deployment tasks.");
+
 		return 0;
 	}
 }
