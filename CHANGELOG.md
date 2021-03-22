@@ -1,4 +1,4 @@
-1.1.0 (unreleased)
+1.1.0
 =====
 
 *   (feature) Add task runners for post deploy + post build.
