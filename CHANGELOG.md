@@ -2,6 +2,7 @@
 =====
 
 *   (feature) Add task runners for post deploy + post build.
+*   (feature) Add `GitVersion` integration.
 
 
 1.0.0

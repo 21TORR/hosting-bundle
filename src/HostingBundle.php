@@ -8,8 +8,8 @@ use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Torr\BundleHelpers\Bundle\ConfigurableBundleExtension;
 use Torr\Hosting\DependencyInjection\HostingBundleConfiguration;
-use Torr\Hosting\Deployment\PostDeploymentTaskInterface;
 use Torr\Hosting\Deployment\PostBuildTaskInterface;
+use Torr\Hosting\Deployment\PostDeploymentTaskInterface;
 use Torr\Hosting\Tier\HostingTier;
 
 final class HostingBundle extends Bundle
