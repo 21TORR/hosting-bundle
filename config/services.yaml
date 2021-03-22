@@ -2,6 +2,9 @@ services:
     _defaults:
         autoconfigure: true
         autowire: true
+        bind:
+            $projectDir: '%kernel.project_dir%'
+            $isDebug: '%kernel.debug%'
 
     Torr\Hosting\:
         resource: ../src/*
@@ -9,3 +12,7 @@ services:
 
     Torr\Hosting\Tier\HostingTier:
         $currentTier: !abstract defined via configuration
+
+    Torr\Hosting\Deployment\TaskRunners:
+        $postBuildTasks: !tagged_iterator 21torr.hosting.post-build
+        $postDeploymentTasks: !tagged_iterator 21torr.hosting.post-deploy

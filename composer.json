@@ -14,6 +14,7 @@
 		"php": "^7.4 || ^8.0",
 		"21torr/bundle-helpers": "^2.1",
 		"symfony/config": "^5.2",
+		"symfony/console": "^5.2",
 		"symfony/dependency-injection": "^5.2"
 	},
 	"require-dev": {
