@@ -1,3 +1,9 @@
+1.1.2
+=====
+
+*   (bug) Fixed invalid check, that prevented loading stored git version info if the tag was `null`.
+
+
 1.1.1
 =====
 

@@ -45,7 +45,8 @@ final class InstalledGitCommit
 	public static function fromArray (array $data) : ?self
 	{
 		return (
-			isset($data["commit"], $data["tag"])
+			\array_key_exists("commit", $data)
+			&& \array_key_exists("tag", $data)
 			&& \is_string($data["commit"])
 			&& (null === $data["tag"] || \is_string($data["tag"]))
 		)
