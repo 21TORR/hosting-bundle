@@ -51,10 +51,10 @@ final class GitVersion
 	/**
 	 * Fetches the currently installed version
 	 */
-	private function fetchVersion () : ?InstalledGitCommit
+	private function fetchVersion (bool $forceRefresh = false) : ?InstalledGitCommit
 	{
 		// first check if there is a installed version file
-		if (null !== ($dumped = $this->versionDumper->load()))
+		if (!$forceRefresh && null !== ($dumped = $this->versionDumper->load()))
 		{
 			return $dumped;
 		}
@@ -71,7 +71,7 @@ final class GitVersion
 	 */
 	public function refresh () : ?InstalledGitCommit
 	{
-		$commit = $this->fetchVersion();
+		$commit = $this->fetchVersion(true);
 
 		$this->cache->delete(self::CACHE_KEY);
 		$this->commit = $commit;

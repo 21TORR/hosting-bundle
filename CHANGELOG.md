@@ -1,3 +1,9 @@
+1.1.3
+=====
+
+*   (bug) Fix refreshing the Git data.
+
+
 1.1.2
 =====
 
