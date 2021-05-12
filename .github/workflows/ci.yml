@@ -35,7 +35,7 @@ jobs:
                     php -i
 
             -   name: Install Composer
-                uses: php-actions/composer@v1
+                uses: php-actions/composer@v5
 
             -   name: Composer Normalize
                 uses: "docker://ergebnis/composer-normalize-action:latest"
